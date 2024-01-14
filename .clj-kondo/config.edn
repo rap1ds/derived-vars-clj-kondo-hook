@@ -1,0 +1,9 @@
+{;; This configuration will be merged with clj-kondo default config.
+ ;;
+ ;; See the default config here: https://github.com/borkdude/clj-kondo/blob/master/src/clj_kondo/impl/config.clj
+
+ :hooks {:analyze-call {clojure.core/def hooks.def/analyze
+                        cljs.core/def hooks.def/analyze}}
+
+ :linters {#_{:clj-kondo/ignore [:clj-kondo-config]}
+           :fn-sym-in-def {:level :warning}}}
